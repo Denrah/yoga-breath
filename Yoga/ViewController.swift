@@ -2,8 +2,6 @@
 //  ViewController.swift
 //  Yoga
 //
-//  Created by National Team on 17.10.2021.
-//
 
 import UIKit
 import MessageUI
