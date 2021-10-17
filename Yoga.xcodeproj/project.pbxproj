@@ -13,6 +13,7 @@
 		7283F1B1271C45C0008FFBBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7283F1AF271C45C0008FFBBE /* Main.storyboard */; };
 		7283F1B3271C45C1008FFBBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7283F1B2271C45C1008FFBBE /* Assets.xcassets */; };
 		7283F1B6271C45C1008FFBBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7283F1B4271C45C1008FFBBE /* LaunchScreen.storyboard */; };
+		7283F1BF271C45DD008FFBBE /* BreathRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283F1BE271C45DD008FFBBE /* BreathRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7283F1B2271C45C1008FFBBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7283F1B5271C45C1008FFBBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7283F1B7271C45C1008FFBBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7283F1BE271C45DD008FFBBE /* BreathRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		7283F1A8271C45C0008FFBBE /* Yoga */ = {
 			isa = PBXGroup;
 			children = (
+				7283F1BD271C45D1008FFBBE /* Utils */,
 				7283F1A9271C45C0008FFBBE /* AppDelegate.swift */,
 				7283F1AB271C45C0008FFBBE /* SceneDelegate.swift */,
 				7283F1AD271C45C0008FFBBE /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				7283F1B7271C45C1008FFBBE /* Info.plist */,
 			);
 			path = Yoga;
+			sourceTree = "<group>";
+		};
+		7283F1BD271C45D1008FFBBE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7283F1BE271C45DD008FFBBE /* BreathRecognizer.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 				7283F1AE271C45C0008FFBBE /* ViewController.swift in Sources */,
 				7283F1AA271C45C0008FFBBE /* AppDelegate.swift in Sources */,
 				7283F1AC271C45C0008FFBBE /* SceneDelegate.swift in Sources */,
+				7283F1BF271C45DD008FFBBE /* BreathRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,11 +304,14 @@
 				DEVELOPMENT_TEAM = LHL6WHL3CM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yoga/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Дыхание";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Отслеживать ваше дыхание";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +321,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,11 +335,14 @@
 				DEVELOPMENT_TEAM = LHL6WHL3CM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yoga/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Дыхание";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Отслеживать ваше дыхание";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +352,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
